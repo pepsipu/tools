@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-print "A simplified version of Network Mapper by Sammy Hajhamid, or Imperial#4290. Credits to Zack Smith for NMAP.\n\n";
+print "A simplified version of Network Mapper by Sammy Hajhamid, or pepsipu#3655. Credits to Zack Smith for NMAP.\n\n";
 sleep(1);
 
 #Target declaring.
